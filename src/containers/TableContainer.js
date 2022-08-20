@@ -36,8 +36,26 @@ function TableContainer({ characters }) {
             <Table.Row key={character.id}>
               <Table.Cell>
                 <Header as="H4" image>
-                  <Image src={character.img} rounded size="mini" />
+                  <Image src={character.img} rounded size="massive" />
+                  <Header.Content>
+                    {character.name}
+                    <Header.Subheader>
+                      {character.nickname}
+                    </Header.Subheader>
+                  </Header.Content>
                 </Header>
+              </Table.Cell>
+              <Table.Cell>
+                {character.occupation.join(', ')}
+              </Table.Cell>
+              <Table.Cell>
+                {character.status}
+              </Table.Cell>
+              <Table.Cell>
+                {character.category}
+              </Table.Cell>
+              <Table.Cell>
+                {character.portrayed}
               </Table.Cell>
             </Table.Row>
           ))}
